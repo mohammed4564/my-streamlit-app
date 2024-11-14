@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 st.write('# Streamlit calculator')
 number1= st.number_input('number 1')
 number2 = st.number_input('number 2')
@@ -17,12 +16,6 @@ data={"Names":["umar",'Sahil','Raju'],
       }
 df=pd.DataFrame(data)
 st.write(df)
-
-fig,ax=plt.subplots()
-ax.plot([1,2,3],[1,8,9])
-st.pyplot(fig)
-
-
 st.title("BMI Calculator")
 weight = st.number_input("Enter your weight (kg):", min_value=1, max_value=500, value=70)
 height = st.number_input("Enter your height (m):", min_value=0.5, max_value=3.0, value=1.75)
